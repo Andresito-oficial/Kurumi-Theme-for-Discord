@@ -1,0 +1,190 @@
+/**
+ * @name Tokisaki Kurumi Dark
+ * @author Andresito-oficial
+ * @version 1.3.0
+ * @description Paleta Kurumi sincronizada con Zaphkiel-Dark.
+ * @source https://github.com/Andresito-oficial/doki-master-theme
+ */
+
+/* ═══════════════════════════════════════════════════════════════
+   WALLPAPER
+   ══════════════════════════════════════════════════════════════ */
+:root {
+    --kurumi-wallpaper: url('https://cdn.jsdelivr.net/gh/Andresito-oficial/Kurumi-Theme-for-Discord@main/wallpapers/kurumi_dark.png');
+    --kurumi-overlay-opacity: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACTIVAR FONDO PERSONALIZADO EN DISCORD
+   ═══════════════════════════════════════════════════════════════ */
+.theme-dark,
+.theme-darker,
+.theme-midnight {
+    --custom-theme-background: var(--kurumi-wallpaper);
+    --custom-theme-base-color: 5 0 0;
+    --custom-theme-text-color: 255 184 198;
+    --custom-theme-base-color-dark: 5 0 0;
+    --custom-theme-text-color-dark: 255 184 198;
+    --custom-background-gradient-opacity-chat: 0.0;
+    --custom-background-gradient-lowest-opacity: 0.0;
+    --custom-background-gradient-lower-opacity: 0.05;
+    --custom-background-gradient-low-opacity: 0.1;
+    --custom-background-gradient-high-opacity: 0.15;
+    --custom-background-gradient-higher-opacity: 0.2;
+    --custom-background-gradient-highest-opacity: 0.25;
+    --custom-background-gradient-opacity-app-frame: 0.1;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   COLORES — Variables nuevas de Discord
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+    /* ─── MODIFICADO: Opacidades muy bajas para efecto "flotante" ─── */
+    --background-base-lowest: rgba(5, 0, 0, 0.15);
+    --background-base-lower: rgba(5, 0, 0, 0.1);
+    --background-base-low: rgba(5, 0, 0, 0.12);
+    --background-surface-high: rgba(5, 0, 0, 0.15);
+    --background-surface-higher: rgba(5, 0, 0, 0.1);
+    --background-surface-highest: rgba(5, 0, 0, 0.2);
+    
+    --border-subtle: #1f0008;
+    --border-strong: #6b0018;
+    --text-default: #ffb8c6;
+    --text-strong: #ffffff;
+    --text-subtle: #6b0018;
+    --text-link: #ff003c;
+    --text-positive: #5fff9f;
+    --text-warning: #ff6b8a;
+    --text-danger: #ff003c;
+    --interactive-icon-default: #ffb8c6;
+    --interactive-icon-hover: #ffffff;
+    --interactive-icon-active: #ff003c;
+    --interactive-text-default: #ffb8c6;
+    --interactive-text-hover: #ffffff;
+    --interactive-text-active: #ff003c;
+    --brand-500: #ff003c;
+    --brand-560: #cc0030;
+    --brand-600: #b3002a;
+    --brand-700: #990024;
+    --brand-800: #7f001e;
+    --brand-900: #660018;
+    --brand-experiment: #ff003c;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   COLORES — Variables clásicas (fallback)
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+    /* ─── MODIFICADO: Paneles casi transparentes para efecto flotante ─── */
+    --background-primary: rgba(5, 0, 0, 0.15);
+    --background-secondary: rgba(5, 0, 0, 0.1);
+    --background-secondary-alt: rgba(5, 0, 0, 0.12);
+    --background-tertiary: rgba(5, 0, 0, 0.15);
+    --background-accent: rgba(5, 0, 0, 0.18);
+    
+    /* ESTOS SE MANTIENEN SÓLIDOS (POPUPS Y MODALES OPACOS) */
+    --background-floating: #0d0003;
+    --background-modifier-hover: rgba(31, 0, 8, 0.3);
+    --background-modifier-active: #1f0008;
+    --background-modifier-selected: #1f0008;
+    --background-modifier-accent: #1f0008;
+    --text-normal: #ffb8c6;
+    --text-muted: #6b0018;
+    --header-primary: #ffb8c6;
+    --header-secondary: #6b0018;
+    --interactive-normal: #ffb8c6;
+    --interactive-hover: #ffffff;
+    --interactive-active: #ff003c;
+    --interactive-muted: #6b0018;
+    --channeltextarea-background: rgba(5, 0, 0, 0.2);
+    --channel-icon: #6b0018;
+    --channels-default: #6b0018;
+    --scrollbar-thin-thumb: #ff003c;
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: #1f0008;
+    --scrollbar-auto-track: #050000;
+    --modal-background: #0d0003;
+    --modal-footer-background: #0d0003;
+    --popout-background: #0d0003;
+    --popout-border: #1f0008;
+    --input-background: #1f0008;
+    --input-border: #6b0018;
+    --input-foreground: #ffb8c6;
+    --input-placeholder: #6b0018;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FORZAR TEXTO EN BODY
+   ═══════════════════════════════════════════════════════════════ */
+body,
+.appMount__51fd7,
+#app-mount {
+    color: var(--text-default) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FONDO — pseudo-elemento body::before
+   ═══════════════════════════════════════════════════════════════ */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: var(--kurumi-wallpaper);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CONTENEDORES TRANSPARENTES (clave para ver el fondo)
+   ═══════════════════════════════════════════════════════════════ */
+html,
+body {
+    background-color: #050000 !important;
+    background-image: none !important;
+}
+
+#app-mount {
+    position: relative;
+    z-index: 1;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+#app-mount > div,
+.bg__121bf,
+.layers__1c917,
+.layer__960e4,
+.base__5ed84,
+.container__9293f,
+.app__160d8,
+.app__01166,
+.backdrop__1a911,
+.withLayer__2f662 {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   POPUPS Y MENÚS 100% SÓLIDOS (SIN TRANSPARENCIA)
+   ═══════════════════════════════════════════════════════════════ */
+[class*="menu_"],
+[role="menu"],
+[class*="tooltip_"],
+[role="tooltip"],
+[class*="popout_"],
+[class*="userPopout_"],
+[class*="userProfileOuter_"],
+[class*="modal_"],
+[role="dialog"],
+[class*="recentMentionsPopout_"],
+[class*="messagesPopoutWrap_"],
+[class*="inbox_"],
+[class*="autocomplete_"],
+[class*="autocompleteInner_"] {
+    background-color: #0d0003 !important;
+    background-image: none !important;
+    border: 1px solid #1f0008 !important;
+}
