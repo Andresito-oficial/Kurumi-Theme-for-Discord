@@ -1,0 +1,289 @@
+/**
+ * @name Tokisaki Kurumi Light
+ * @author Andresito-oficial
+ * @version 1.4.1
+ * @description Paleta sincronizada con Zaphkiel (día).
+ * @source https://github.com/Andresito-oficial/doki-master-theme
+ */
+
+@import url('https://discordstyles.github.io/SoftX/SoftX.css');
+@import url('https://discordstyles.github.io/SoftX/RadialGlow.css');
+@import url('https://discordstyles.github.io/SoftX/VerticalUserArea.css');
+@import url('https://discordstyles.github.io/Addons/windows-titlebar.css');
+
+/* ══════════════════════════════════════════════════════════════
+   WALLPAPER
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+    --kurumi-wallpaper: url('https://cdn.jsdelivr.net/gh/Andresito-oficial/Kurumi-Theme-for-Discord@main/wallpapers/kurumi_light.png');
+    --kurumi-overlay-opacity: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACTIVAR FONDO PERSONALIZADO EN DISCORD (SOLO MODO CLARO)
+   ═══════════════════════════════════════════════════════════════ */
+.theme-light {
+    --custom-theme-background: var(--kurumi-wallpaper);
+    --custom-theme-base-color: 250 244 236;
+    --custom-theme-text-color: 194 24 91;
+    --custom-background-gradient-opacity-chat: 0.0;
+    --custom-background-gradient-lowest-opacity: 0.0;
+    --custom-background-gradient-lower-opacity: 0.15;
+    --custom-background-gradient-low-opacity: 0.3;
+    --custom-background-gradient-high-opacity: 0.35;
+    --custom-background-gradient-higher-opacity: 0.4;
+    --custom-background-gradient-highest-opacity: 0.45;
+    --custom-background-gradient-opacity-app-frame: 0.3;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   COLORES — Variables principales
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+    --accent: 194, 24, 91;
+    --glow-intensity: 0.5;
+    --font: 'Comfortaa', 'Whitney', sans-serif;
+    --channels-width: 220px;
+    --guilds-width: 105px;
+    --members-width: 240px;
+    --server-size: 48px;
+    --chat-avatar-size: 36px;
+    
+    --background-primary: rgba(250, 244, 236, 0.65);
+    --background-secondary: rgba(242, 230, 217, 0.6);
+    --background-secondary-alt: rgba(236, 223, 208, 0.6);
+    --background-tertiary: rgba(242, 230, 217, 0.65);
+    --background-accent: rgba(245, 220, 229, 0.65);
+    --background-floating: #fffdf9;
+    --background-modifier-hover: rgba(245, 220, 229, 0.5);
+    --background-modifier-active: #f5dce5;
+    --background-modifier-selected: #f5dce5;
+    --background-modifier-accent: #f5dce5;
+    
+    --text-normal: #c2185b;
+    --text-muted: #b98a9c;
+    --text-link: #c2185b;
+    --text-positive: #1a7a3d;
+    --text-warning: #c2185b;
+    --text-danger: #a01453;
+    --header-primary: #c2185b;
+    --header-secondary: #b98a9c;
+    --interactive-normal: #c2185b;
+    --interactive-hover: #a01453;
+    --interactive-active: #c2185b;
+    --interactive-muted: #b98a9c;
+    
+    --brand-experiment: #c2185b;
+    --brand-experiment-560: #a01453;
+    --brand-experiment-600: #8b0d47;
+    --brand-experiment-700: #760a3b;
+    --brand-experiment-800: #61082f;
+    --brand-experiment-900: #4c0623;
+    
+    --channeltextarea-background: rgba(245, 220, 229, 0.6);
+    --channel-icon: #b98a9c;
+    --channels-default: #b98a9c;
+    
+    --scrollbar-thin-thumb: #c2185b;
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: #e8ded0;
+    --scrollbar-auto-track: #faf4ec;
+    
+    --modal-background: #fffdf9;
+    --modal-footer-background: #fffdf9;
+    --popout-background: #fffdf9;
+    --popout-border: #e8ded0;
+    
+    --input-background: #f5dce5;
+    --input-border: #e8ded0;
+    --input-foreground: #c2185b;
+    --input-placeholder: #b98a9c;
+    
+    --status-positive: #1a7a3d;
+    --status-danger: #a01453;
+    --status-warning: #c2185b;
+    
+    --border-color: #e8ded0;
+    --border-subtle: #e8ded0;
+    
+    --rs-small-spacing: 0px;
+    --rs-medium-spacing: 0px;
+    --rs-large-spacing: 0px;
+    --rs-small-width: 2px;
+    --rs-medium-width: 2px;
+    --rs-large-width: 2.5px;
+    --rs-avatar-shape: 50%;
+    --rs-online-color: #1a7a3d;
+    --rs-idle-color: #c2185b;
+    --rs-dnd-color: #a01453;
+    --rs-offline-color: #b98a9c;
+    --rs-streaming-color: #c2185b;
+    --rs-phone-color: var(--rs-online-color);
+    --rs-phone-visible: block;
+    --rs-invisible-color: #b98a9c;
+    
+    --brand-500: #c2185b;
+    --brand-560: #a01453;
+    --brand-600: #8b0d47;
+    --brand-700: #760a3b;
+    --brand-800: #61082f;
+    --brand-900: #4c0623;
+    --brand-500-hsl: 335 78% 43%;
+    --brand-560-hsl: 335 78% 36%;
+    --interactive-normal-hsl: 335 78% 43%;
+    --interactive-hover-hsl: 335 78% 36%;
+    --interactive-active-hsl: 335 78% 43%;
+    --interactive-muted-hsl: 335 25% 67%;
+    --text-normal-hsl: 335 78% 43%;
+    --header-primary-hsl: 335 78% 43%;
+    --text-muted-hsl: 335 25% 67%;
+    --channels-default-hsl: 335 25% 67%;
+    --channel-icon-hsl: 335 25% 67%;
+    --background-message-hover: rgba(245, 220, 229, 0.5);
+    --background-mentioned: rgba(194, 24, 91, 0.08);
+    --background-mentioned-hover: rgba(194, 24, 91, 0.12);
+    --info-positive-background: rgba(26, 122, 61, 0.1);
+    --info-warning-background: rgba(194, 24, 91, 0.1);
+    --info-danger-background: rgba(179, 0, 60, 0.1);
+    --interactive-icon-default: #c2185b;
+    --interactive-icon-hover: #a01453;
+    --interactive-icon-active: #c2185b;
+    --interactive-icon-muted: #b98a9c;
+    --interactive-icon-default-hsl: 335 78% 43%;
+    --interactive-icon-hover-hsl: 335 78% 36%;
+    --interactive-icon-active-hsl: 335 78% 43%;
+    --interactive-icon-muted-hsl: 335 25% 67%;
+    --icon-default: #c2185b;
+    --icon-muted: #b98a9c;
+    --icon-strong: #8b0d47;
+    --icon-default-hsl: 335 78% 43%;
+    --icon-muted-hsl: 335 25% 67%;
+    --icon-strong-hsl: 335 78% 33%;
+    --interactive-text-default: #c2185b;
+    --interactive-text-hover: #a01453;
+    --interactive-text-active: #c2185b;
+    --interactive-text-default-hsl: 335 78% 43%;
+    --interactive-text-hover-hsl: 335 78% 36%;
+    --interactive-text-active-hsl: 335 78% 43%;
+    --text-muted-on-default: #b98a9c;
+    --text-muted-on-default-hsl: 335 25% 67%;
+    
+    --bd-brand: #c2185b;
+    --bd-brand-hover: #a01453;
+    --bd-brand-active: #8b0d47;
+    --bd-brand-disabled: #b98a9c;
+    --bg-base-primary: rgba(250, 244, 236, 0.65);
+    --bg-base-secondary: rgba(242, 230, 217, 0.6);
+    --bg-base-tertiary: rgba(236, 223, 208, 0.6);
+    --bg-surface-raised: #fffdf9;
+    --bg-surface-overlay: #fffdf9;
+    --bg-surface-highest: #f5dce5;
+    --text-default: #c2185b;
+    --text-strong: #8b0d47;
+    --text-subtle: #b98a9c;
+    --text-link: #c2185b;
+    --border-muted: #e8ded0;
+    --border-strong: #b98a9c;
+    --status-online: #1a7a3d;
+    --status-idle: #c2185b;
+    --status-dnd: #a01453;
+    --status-offline: #b98a9c;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FORZAR COLOR DE ICONOS DE CANAL
+   ══════════════════════════════════════════════════════════════ */
+.theme-light {
+    --channel-icon: #b98a9c !important;
+    --channel-icon-hsl: 335 25% 67% !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FORZAR TEXTO EN BODY
+   ══════════════════════════════════════════════════════════════ */
+.theme-light body,
+.theme-light .appMount__51fd7,
+.theme-light #app-mount {
+    color: var(--text-default) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FONDO — pseudo-elemento body::before
+   ═══════════════════════════════════════════════════════════════ */
+.theme-light body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: var(--kurumi-wallpaper);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CONTENEDORES TRANSPARENTES
+   ═══════════════════════════════════════════════════════════════ */
+.theme-light html,
+.theme-light body {
+    background-color: #faf4ec !important;
+    background-image: none !important;
+}
+
+.theme-light #app-mount {
+    position: relative;
+    z-index: 1;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+.theme-light #app-mount > div,
+.theme-light .bg__121bf,
+.theme-light .layers__1c917,
+.theme-light .layer__960e4,
+.theme-light .base__5ed84,
+.theme-light .container__9293f,
+.theme-light .app__160d8,
+.theme-light .app__01166,
+.theme-light .backdrop__1a911,
+.theme-light .withLayer__2f662 {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BARRA SUPERIOR Y CAJA DE TEXTO — Fondos semitransparentes
+   ═══════════════════════════════════════════════════════════════ */
+.theme-light .header__21b38,
+.theme-light .header__21b38 > div,
+.theme-light .chat__52833 > .header__21b38,
+.theme-light .container__9293f > .header__21b38,
+.theme-light .form__77829,
+.theme-light .form__77829 > div,
+.theme-light .scrollableContainer__74017,
+.theme-light .inner__74017 {
+    background-color: rgba(250, 244, 236, 0.65) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   POPUPS Y MENÚS 100% SÓLIDOS
+   ══════════════════════════════════════════════════════════════ */
+.theme-light [class*="menu_"],
+.theme-light [role="menu"],
+.theme-light [class*="tooltip_"],
+.theme-light [role="tooltip"],
+.theme-light [class*="popout_"],
+.theme-light [class*="userPopout_"],
+.theme-light [class*="userProfileOuter_"],
+.theme-light [class*="modal_"],
+.theme-light [role="dialog"],
+.theme-light [class*="recentMentionsPopout_"],
+.theme-light [class*="messagesPopoutWrap_"],
+.theme-light [class*="inbox_"],
+.theme-light [class*="autocomplete_"],
+.theme-light [class*="autocompleteInner_"] {
+    background-color: #fffdf9 !important;
+    background-image: none !important;
+    border: 1px solid #e8ded0 !important;
+}
